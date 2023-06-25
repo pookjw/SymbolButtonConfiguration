@@ -33,11 +33,13 @@ static void custom_updateImageViewWithConfiguration(id self, SEL _cmd, UIButtonC
                 }
                 
                 if (![transition.symbolImage isEqual:imageView.image]) {
+                    UIButton *button = ((UIButton * (*)(id, SEL))objc_msgSend)(self, NSSelectorFromString(@"button"));
+                    
                     [imageView setSymbolImage:transition.symbolImage
                         withContentTransition:transition.transition
                                       options:transition.options
                                    completion:^(UISymbolEffectCompletionContext *context) {
-                        if (context.isFinished && [context.contentTransition isEqual:transition]) {
+                        if (context.isFinished && [button.configuration isEqual:configuration]) {
                             original_updateImageViewWithConfiguration(self, _cmd, configuration);
                         }
                         
