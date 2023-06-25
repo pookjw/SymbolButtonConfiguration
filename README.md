@@ -2,7 +2,7 @@
 
 Use iOS 17 UIImage Symbol Effects, Transitions with UIButtonConfiguration.
 
-![](0.png)
+![](0.gif)
 
 ## Usage
 
