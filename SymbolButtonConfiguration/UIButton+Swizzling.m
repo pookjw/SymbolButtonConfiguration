@@ -39,8 +39,8 @@ static void custom_updateImageViewWithConfiguration(id self, SEL _cmd, UIButtonC
                         withContentTransition:transition.transition
                                       options:transition.options
                                    completion:^(UISymbolEffectCompletionContext *context) {
-                        if (context.isFinished && [button.configuration isEqual:configuration]) {
-                            original_updateImageViewWithConfiguration(self, _cmd, configuration);
+                        if (context.isFinished && [button.configuration isEqual:_configuration]) {
+                            original_updateImageViewWithConfiguration(self, _cmd, _configuration);
                         }
                         
                         if (transition.completion) {
