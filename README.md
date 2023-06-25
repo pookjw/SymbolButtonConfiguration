@@ -1,6 +1,6 @@
 # SymbolButtonConfiguration
 
-Use iOS 17 UIImage Symbol Effects, Transitions with UIButtonConfiguration.
+Use iOS 17 UIImageView Symbol Effects, Transitions with UIButtonConfiguration.
 
 ![](0.gif)
 
