@@ -6,7 +6,7 @@ Use iOS 17 UIImage Symbol Effects, Transitions with UIButtonConfiguration.
 
 ## Usage
 
-**Swift is not supported.** There is a lack of functionality in the iOS 17 SDK. I believe Apple should improve the `_ObjectiveCBridgeable` compatibility between `SymbolEffect` and `NSSymbolEffect`."
+**Swift is not supported.** There is a lack of functionality in the iOS 17 SDK. I believe Apple should improve the `_ObjectiveCBridgeable` compatibility between `SymbolEffect` and `NSSymbolEffect`.
 
 It only supports Objective-C with MRC, but making it compatible with ARC is easy.
 
