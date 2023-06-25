@@ -38,7 +38,7 @@ API_AVAILABLE(ios(17.0),tvos(17.0),watchos(10.0))
 API_AVAILABLE(ios(17.0),tvos(17.0),watchos(10.0))
 @interface SymbolButtonConfiguration : UIButtonConfiguration
 @property (retain, readonly) NSMutableArray<SymbolButtonConfigurationEffect *> *sbc_effects;
-@property (retain, nullable) SymbolButtonConfigurationTransition *sbc_transition;
+@property (retain, nullable, nonatomic, setter=set_sbc_transition:) SymbolButtonConfigurationTransition *sbc_transition;
 @end
 
 NS_ASSUME_NONNULL_END

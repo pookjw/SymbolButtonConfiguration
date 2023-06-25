@@ -155,7 +155,9 @@
 
 @end
 
-@implementation SymbolButtonConfiguration
+@implementation SymbolButtonConfiguration {
+    SymbolButtonConfigurationTransition *_sbc_transition;
+}
 
 - (instancetype)_initWithBehaviors:(id)arg1 {
     struct objc_super superInfo = { self, [self superclass] };
@@ -202,6 +204,18 @@
     [super encodeWithCoder:coder];
     [coder encodeObject:_sbc_effects forKey:@"sbc_effects"];
     [coder encodeObject:_sbc_transition forKey:@"sbc_transition"];
+}
+
+- (void)set_sbc_transition:(SymbolButtonConfigurationTransition *)sbc_transition {
+    [self willChangeValueForKey:@"sbc_transition"];
+    [_sbc_transition release];
+    _sbc_transition = [sbc_transition copy];
+    self.image = sbc_transition.symbolImage;
+    [self didChangeValueForKey:@"sbc_transition"];
+}
+
+- (SymbolButtonConfigurationTransition *)sbc_transition {
+    return _sbc_transition;
 }
 
 @end

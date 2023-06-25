@@ -70,8 +70,6 @@
         image = [UIImage systemImageNamed:@"pause.fill"];
     }
     
-    configuration.image = image;
-    
     SymbolButtonConfigurationTransition *sbc_transition = [[SymbolButtonConfigurationTransition alloc] initWithSymbolImage:image transition:transition options:options completion:nil];
     configuration.sbc_transition = sbc_transition;
     [sbc_transition release];
