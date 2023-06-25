@@ -25,6 +25,7 @@
     self.view.backgroundColor = UIColor.systemBackgroundColor;
     
     SymbolButtonConfiguration *configuration = [SymbolButtonConfiguration plainButtonConfiguration];
+    configuration.title = @"Tap me!!!";
     configuration.image = [UIImage systemImageNamed:@"playpause.fill"];
     
     SymbolButtonConfigurationEffect *effect = [[SymbolButtonConfigurationEffect alloc] initWithSymbolEffect:[NSSymbolBounceEffect bounceUpEffect]
@@ -56,6 +57,7 @@
 
 - (void)updateButton {
     SymbolButtonConfiguration *configuration = [self.button.configuration copy];
+    configuration.title = nil;
     [configuration.sbc_effects removeAllObjects];
     
     NSSymbolContentTransition *transition = [NSSymbolReplaceContentTransition replaceDownUpTransition];
