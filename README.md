@@ -2,6 +2,8 @@
 
 Use iOS 17 UIImageView Symbol Effects, Transitions with UIButtonConfiguration.
 
+Tested with iOS 17.0 beta 2 SDK.
+
 ![](0.gif)
 
 ## Usage
