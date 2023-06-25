@@ -23,7 +23,7 @@ API_AVAILABLE(ios(17.0),tvos(17.0),watchos(10.0))
 @end
 
 API_AVAILABLE(ios(17.0),tvos(17.0),watchos(10.0))
-@interface SymbolButtonConfigurationTransition : NSObject <NSCopying>
+@interface SymbolButtonConfigurationTransition : NSObject <NSCopying, NSSecureCoding>
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithSymbolImage:(UIImage *)symbolImage transition:(NSSymbolContentTransition *)transition options:(NSSymbolEffectOptions * _Nullable)options completion:(UISymbolEffectCompletion _Nullable)completionHandler;
