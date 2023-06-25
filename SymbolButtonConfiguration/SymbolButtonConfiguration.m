@@ -173,8 +173,8 @@
     self = [super initWithCoder:coder];
     
     if (self) {
-        _sbc_effects = [coder decodeObjectOfClasses:[NSSet setWithObjects:NSMutableArray.class, SymbolButtonConfigurationEffect.class, nil] forKey:@"sbc_effects"];
-        _sbc_transition = [coder decodeObjectOfClass:SymbolButtonConfigurationTransition.class forKey:@"sbc_transition"];
+        _sbc_effects = [[coder decodeObjectOfClasses:[NSSet setWithObjects:NSMutableArray.class, SymbolButtonConfigurationEffect.class, nil] forKey:@"sbc_effects"] retain];
+        _sbc_transition = [[coder decodeObjectOfClass:SymbolButtonConfigurationTransition.class forKey:@"sbc_transition"] retain];
     }
     
     return self;
